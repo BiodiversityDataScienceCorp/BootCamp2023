@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Applied Data Science Boot Camp
 
 ## Spring 2023
