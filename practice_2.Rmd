@@ -1,0 +1,48 @@
+---
+title: "practice_2"
+author: "Mila pruiett"
+date: "2023-01-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### Practice with
+- Packages
+- Accessing specific columns in a data set
+- Assigning variables
+- Filtering
+
+
+1. Install and load the tidyverse and palmerpenguins packages. 
+```{r}
+
+```
+
+
+2. Assign the bill length column to a variable called penguinBillLength
+```{r}
+
+```
+
+
+3. Assign the bill depth column to a variable called penguinBillDepth. 
+```{r}
+
+```
+
+
+4. Create a subset of the data that includes male Gentoo penguins with flipper lengths greater than 20 mm. 
+```{r}
+
+```
+
+
+5. Create a subset of the data that includes all penguins on Biscoe island with flipper lengths greater than 20 mm. Remove all of the NA values as well. 
+```{r}
+
+```
+
