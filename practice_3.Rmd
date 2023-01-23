@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Each plot should have axis labels, a title, and use colors to illustrate the data.
 
 
-1. Install and load the tidyverse and palmerpenguins packages. 
+1. (Install if you haven't completed lessons 2 or 3 or practice 2) and load the tidyverse and palmerpenguins packages. 
 ```{r}
 
 ```
@@ -27,11 +27,13 @@ Each plot should have axis labels, a title, and use colors to illustrate the dat
 2. Create a subset of the data that includes all the data from the years 2007 and 2008.
 ```{r}
 
+
 ```
 
 
 3. Create a box plot of the bill lengths by male and female penguins of all species from the years 2007 and 2008. 
 ```{r}
+
 
 ```
 
@@ -48,7 +50,7 @@ Each plot should have axis labels, a title, and use colors to illustrate the dat
 ```
 
 
-6. Create a scatter plot of the relationship between bill length and bill depth for penguins on only Torgersen island and color by species.
+6. Create a scatter plot of the relationship between bill length and bill depth for penguins on only Dream island and color by species.
 ```{r}
 
 ```

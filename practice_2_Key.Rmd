@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Filtering
 
 
-1. Install and load the tidyverse and palmerpenguins packages. 
+1. (Install if you haven't completed lesson 2) and load the tidyverse and palmerpenguins packages. 
 ```{r}
 install.packages("tidyverse")
 install.packages("palmerpenguins")
