@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Packages
 - Accessing specific columns in a data set
 - Assigning variables
+- Select
 - Filtering
 
 
@@ -34,15 +35,35 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
+For Questions 4 - 7, you can choose to either use the pipe %>% or not. Either way is great! 
 
-4. Create a subset of the data that includes male Gentoo penguins with flipper lengths greater than 20 mm. 
+4. Assign only the columns island, bill_length_mm, and bill_depth_mm to a new variable (name it whatever you'd like!). 
+```{r}
+
+```
+
+5. Assign only the columns sex and year to the variable sexByYear. 
 ```{r}
 
 ```
 
 
-5. Create a subset of the data that includes all penguins on Biscoe island with flipper lengths greater than 20 mm. Remove all of the NA values as well. 
+6. Create a subset of the data that includes male Gentoo penguins with flipper lengths greater than 20 mm. 
 ```{r}
 
 ```
+
+
+7. Create a subset of the data that includes all penguins on Biscoe island with flipper lengths greater than 20 mm. Remove all of the NA values as well. 
+```{r}
+
+```
+
+
+Challenge: Using the pipe %>%, string together two commands with only one line of code to create a data set that includes only the columns: species, sex, and flipper length, with only Adelie penguins whose flippers are greater than 180 mm. 
+```{r}
+
+```
+
+
 

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Installing and loading a package
 - Opening and looking at a data set
 - Accessing a specific column in a data set
-- Descriptive statistics of a column
+- Selecting columns to create a new variable
 - Relational operators
 - Filtering 
 - The pipe %>% 
@@ -58,6 +58,20 @@ Now your turn. Create a variable (remember, to assign a variable use the syntax:
 
 ```
 
+### Selecting
+While the syntax data$ColumnName is useful in many cases, there are times when we want to have multiple columns in a new variable. For example, we may be interested in only the penguin island and mass. We can do this with the select function. 
+
+```{r}
+penguinIslandMass <- select(penguins, island, body_mass_g)
+```
+
+
+Your turn. Select species and flipper_length_mm and assign it to the variable penguinSpFlipper.
+```{r}
+
+```
+
+Select is very useful when we have a large data set that contains information that we are uninterested in, or when we need to put our data in a specific format. 
 
 ### Filtering
 
@@ -122,7 +136,6 @@ Your turn. Create a variable called biscoeAndDreamSmall that contains all the pe
 ```
 
 
-
 ### The "Pipe"
 
 The Tidyverse introduced a new convention to R called the "pipe":
@@ -143,6 +156,18 @@ Try using the pipe in the code chunk below to create a data subset of penguins t
 ```{r}
 # create and print malePenguins. 
 ```
+
+You can also use the pipe for select (and many other functions as well). Instead of putting the data name inside of the function, you can put it before the pipe.
+
+```{r}
+penguinIslandMass2 <- penguins %>% select(island, body_mass_g)
+```
+
+Your turn. Use the pipe syntax to assign the columns bill_length_mm and sex to a new variable with select.
+```{r}
+
+```
+
 
 
 ### Removing NA values
