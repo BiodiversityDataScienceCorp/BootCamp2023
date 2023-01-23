@@ -1,0 +1,67 @@
+---
+title: "practice_3"
+author: "Mila pruiett"
+date: "2023-01-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Practice with
+* Packages
+* Filtering
+* Ggplot
+
+### Instructions for plots
+Each plot should have axis labels, a title, and use colors to illustrate the data.
+
+
+1. (Install if you haven't completed lessons 2 or 3 or practice 2) and load the tidyverse and palmerpenguins packages. 
+```{r}
+library("tidyverse")
+library("palmerpenguins")
+```
+
+
+2. Create a subset of the data that includes all the data from the years 2007 and 2008.
+```{r}
+earlyYears <- penguins %>% filter(year < 2009)
+
+```
+
+
+3. Create a box plot of the bill lengths by male and female penguins of all species from the years 2007 and 2008. 
+```{r}
+ggplot(data = penguins, mapping = aes(x = sex, y = bill_length_mm, fill = sex)) +
+  geom_boxplot() +
+  labs(x = "Penguin Sex", y = "Bill Length (mm)", title = "Male penguins tend to have longer bills")
+```
+
+
+4. Create a subset of the data that includes only the female penguins. 
+```{r}
+femaleOnly <- penguins %>% filter(sex == "female")
+```
+
+
+5. Create a box plot of the bill depth by species of only the female penguins. 
+```{r}
+
+# here I am using the pipe to put the data into the ggplot function, eliminating the need to say what data to use inside of the function. It's just another way of doing the same thing. 
+
+femaleOnly %>% ggplot(aes(x = species, y = bill_depth_mm, fill = species)) +
+  geom_boxplot() +
+  labs(x = "Penguin Species", y = "Bill Depth (mm)", title = "Bill depth changes by species")
+```
+
+
+6. Create a scatter plot of the relationship between bill length and bill depth for penguins on only Dream island and color by species.
+```{r}
+penguins %>% filter(island == "Dream") %>% 
+  ggplot(aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point() +
+  labs(x = "Bill Length (mm)", y = "Bill Depth (mm)", title = "Is there a relationship between bill depth and bill length of penguins living on Torgersen Island?")
+```
+

@@ -1,0 +1,3 @@
+"0","ggplot(data = penguins, mapping = aes(x = sex, y = bill_length_mm, fill = sex)) +"
+"0","  geom_boxplot() +"
+"0","  labs(x = ""Penguin Sex"", y = ""Bill Length (mm)"", title = ""Male penguins tend to have longer bills"")"
