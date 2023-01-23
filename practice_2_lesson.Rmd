@@ -48,7 +48,7 @@ For Questions 4 - 7, you can choose to either use the pipe %>% or not. Either wa
 ```
 
 
-6. Create a subset of the data that includes male Gentoo penguins with flipper lengths greater than 20 mm. 
+6. Create a subset of the data that includes all the columns only for male Gentoo penguins with flipper lengths greater than 20 mm. 
 ```{r}
 
 ```

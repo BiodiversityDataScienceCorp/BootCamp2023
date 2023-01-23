@@ -20,18 +20,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. Install and load the tidyverse and palmerpenguins packages. 
 ```{r}
+install.packages("tidyverse")
+install.packages("palmerpenguins")
 
+library("tidyverse")
+library("palmerpenguins")
 ```
 
 
-2. Assign the bill length column to a variable called penguinBillLength
+2. Assign the bill length column to a variable called penguinBillLength. Remember the data name is penguins. 
 ```{r}
-
+penguinBillLength <- penguins$bill_length_mm
 ```
 
 
 3. Assign the bill depth column to a variable called penguinBillDepth. 
 ```{r}
+penguinBillDepth <- penguins$bill_depth_mm
 
 ```
 
@@ -39,30 +44,44 @@ For Questions 4 - 7, you can choose to either use the pipe %>% or not. Either wa
 
 4. Assign only the columns island, bill_length_mm, and bill_depth_mm to a new variable (name it whatever you'd like!). 
 ```{r}
+# standard way
+dataSubset <- select(penguins, island, bill_length_mm, bill_depth_mm)
 
+# with the pipe
+dataSubset2 <- penguins %>% select(island, bill_length_mm, bill_depth_mm)
 ```
 
 5. Assign only the columns sex and year to the variable sexByYear. 
 ```{r}
+# standard way
+sexByYear <- select(penguins, sex, year)
 
+# with the pipe
+sexByYear2 <- penguins %>% select(sex, year)
 ```
 
 
-6. Create a subset of the data that includes male Gentoo penguins with flipper lengths greater than 20 mm. 
+6. Create a subset of the data that includes all the columns for only male Gentoo penguins with flipper lengths greater than 20 mm. 
 ```{r}
+# standard way
+longMales <- filter(penguins, sex == "male", flipper_length_mm > 20)
 
+# with the pipe
+longMales2 <- penguins %>% filter(sex == "male", flipper_length_mm > 20) 
 ```
 
 
 7. Create a subset of the data that includes all penguins on Biscoe island with flipper lengths greater than 20 mm. Remove all of the NA values as well. 
 ```{r}
 
+myPenguins <- na.omit(filter(penguins, island == "Biscoe", flipper_length_mm > 20))
+
 ```
 
 
 Challenge: Using the pipe %>%, string together two commands with only one line of code to create a data set that includes only the columns: species, sex, and flipper length, with only Adelie penguins whose flippers are greater than 180 mm. 
 ```{r}
-
+longAdelieSubset <- penguins %>% select(species, sex, flipper_length_mm) %>% filter(species == "Adelie", flipper_length_mm > 180)
 ```
 
 
