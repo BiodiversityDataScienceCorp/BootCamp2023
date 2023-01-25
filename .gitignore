@@ -4,6 +4,7 @@ github.R
 # History files
 .Rhistory
 .Rapp.history
+.Rproj.user/*.txt
 
 # Session Data files
 .RData
